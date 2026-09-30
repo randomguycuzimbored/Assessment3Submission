@@ -2,6 +2,10 @@
 
 unsigned int* swapBits(unsigned int* value, unsigned int i, unsigned int j, int& popcount){
 //kicking back early unsets
+
+unsigned int* a=nullptr;
+a=value;
+
 if (value==nullptr || i > 31 || j > 31 )
     return nullptr;
 
@@ -12,10 +16,11 @@ if(((*value & (1u << i))!=0)!=((*value & (1u << j))!=0)){
 }
 
 //count number of 1
+
 while (*value > 0){
     *value &= (*value-1);
     popcount++;
 }
 
-return &*value;
+return a;
 }
