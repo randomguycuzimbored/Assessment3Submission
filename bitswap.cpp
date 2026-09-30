@@ -19,5 +19,5 @@ while (*value > 0){
 }
 
 
-return *value;
+return value;
 }
