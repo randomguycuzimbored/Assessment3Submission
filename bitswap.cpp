@@ -14,8 +14,12 @@ if(((*value & (1u << i))!=0)!=((*value & (1u << j))!=0)){
 }
 
 //count number of 1
+unsigned int* temp=value;
 
-popcount=2;
+while (*temp > 0){
+    *temp &= (*temp-1);
+    popcount++;
+}
 
 return value;
 }
