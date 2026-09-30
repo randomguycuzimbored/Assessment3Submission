@@ -17,7 +17,7 @@ if(((*value & (1u << i))!=0)!=((*value & (1u << j))!=0)){
 
 //count number of 1
 
-popcount=1;
+popcount=2;
 
 return a;
 }
