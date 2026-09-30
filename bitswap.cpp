@@ -17,5 +17,5 @@ while (*value > 0){
     popcount++;
 }
 
-return value;
+return *&value;
 }
