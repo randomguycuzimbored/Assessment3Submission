@@ -12,6 +12,10 @@ if(((*value & (1u << i))!=0)!=((*value & (1u << j))!=0)){
 }
 //count number of 1
 popcount=0;
+while (*value > 0){
+    *value &= (*value-1);
+    popcount++;
+}
 
 return value;
 }
